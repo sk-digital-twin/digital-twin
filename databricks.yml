@@ -17,15 +17,15 @@ resources:
           notebook_task:
             notebook_path: ./1-Create-Sensor-Bronze-Table.ipynb
 
-        - task_key: ingest_data
-          depends_on:
-            - task_key: create_bronze_table
-          notebook_task:
-            notebook_path: ./2-Ingest-Data-Zerobus.ipynb
+        # - task_key: ingest_data
+        #   depends_on:
+        #     - task_key: create_bronze_table
+        #   notebook_task:
+        #     notebook_path: ./2-Ingest-Data-Zerobus.ipynb
 
         - task_key: setup_mapping_pipeline
           depends_on:
-            - task_key: ingest_data
+            - task_key: create_bronze_table
           notebook_task:
             notebook_path: ./3-Setup-Mapping-Pipeline.ipynb
 
