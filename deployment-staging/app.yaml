@@ -1,3 +1,24 @@
 command:
 - python
 - server.py
+env:
+- name: WAREHOUSE_ID
+  valueFrom: sql_warehouse
+- name: SYNCED_TABLE_FULL_NAME
+  value: lakebasedigitaltwins-sk.default.latest_sensor_triples
+- name: TRIPLE_TABLE_FULL_NAME
+  value: sunny_catalog.default.triples
+- name: DATABRICKS_CATALOG
+  value: sunny_catalog
+- name: DATABRICKS_SCHEMA
+  value: default
+- name: DATABRICKS_TABLE
+  value: sunny_catalog.default.triples
+- name: LAKEBASE_INSTANCE_NAME
+  value: lakebasedigitaltwins-sk
+- name: PG_TOKEN_REFRESH_SECONDS
+  value: 900
+- name: RDF_MODELS_FULL_TABLE_NAME
+  value: digitaltwin.rdf_models
+- name: PGDATABASE
+  value: lakebasedigitaltwins-sk
