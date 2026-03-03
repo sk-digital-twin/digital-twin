@@ -7,13 +7,13 @@ env:
 - name: SYNCED_TABLE_FULL_NAME
   value: lakebasedigitaltwins-sk.default.latest_sensor_triples
 - name: TRIPLE_TABLE_FULL_NAME
-  value: sunny_catalog.default.triples
+  value: sunny_catalog_new.default.triples
 - name: DATABRICKS_CATALOG
-  value: sunny_catalog
+  value: sunny_catalog_new
 - name: DATABRICKS_SCHEMA
   value: default
 - name: DATABRICKS_TABLE
-  value: sunny_catalog.default.triples
+  value: sunny_catalog_new.default.triples
 - name: LAKEBASE_INSTANCE_NAME
   value: lakebasedigitaltwins-sk
 - name: PG_TOKEN_REFRESH_SECONDS
